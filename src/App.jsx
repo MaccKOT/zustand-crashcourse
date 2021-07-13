@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSettingsStore } from './store';
 import People from './components/People';
 import Input from './components/Input';
+import Pokemon from './components/Pokemon';
 
 function App() {
   const toggleDarkMode = useSettingsStore((state) => state.toggleDarkMode);
@@ -18,16 +19,19 @@ function App() {
   return (
     <div>
       <header className='App-header'>
-        <p>Hello Vite + React + Zustand!</p>
-        <hr />
+        <h1>Hello Vite + React + Zustand!</h1>{' '}
         <button type='button' onClick={toggleDarkMode}>
           Toggle Dark Theme
         </button>
+        <br />
+        <br />
         <Input />
         <People />
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.
         </p>
+        <Pokemon />
+        <hr />
         <p>
           <a
             className='App-link'
